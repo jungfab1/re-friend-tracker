@@ -204,7 +204,15 @@ export class GuiModel {
  "url": "/group",
  "form": "GroupForm",
  "width": 2
-},                        {
+},                       
+{
+ "id": "location",
+ "type": "autocomplete",
+ "name": "Location",
+ "url": "/location",
+ "form": "LocationForm",
+ "width": 2
+}, {
                             "id": "comment",
                             "type": "text",
                             "name": "Comments",
@@ -256,7 +264,7 @@ export class GuiModel {
 {
  "type": "button",
  "name": "Activities",
- "icon": "snowboarding",
+ "icon": "fa-snowboarding",
  "color": "red",
  "page": "activitiespage",
 },
@@ -358,16 +366,14 @@ export class GuiModel {
  "form": "ActivityForm"
  }
  },
- {
-"type": "list",
-"icon": "fa-weixin",
-"color": "wisteria",
-"search": true,
-"url": "/activity",
-"form": {
-"form": "ActivityForm"
-}
-},
+                        {
+                            "type": "list",
+                            "icon": "fa-snowboarding",
+                            "color": "red",
+                            "search": true,
+                            "url": "/activity",
+                            "page": "activitypage"
+                        },
  ]
 },{
  "id": "friendpage",
@@ -397,12 +403,40 @@ export class GuiModel {
                         },
                         {
                             "type": "list",
-                            "icon": "fa-home",
-                            "color": "blue",
+                            "icon": "fa-snowboarding",
+                            "color": "red",
                             "search": true,
                             "url": "/friend/:friendKey/activity",
                             "form": {
                                 "form": "ActivityForm"
+                            }
+                        },
+ ]
+},{
+ "id": "activitypage",
+ "elementList": [
+ {
+ "type": "backbutton",
+ },{
+                            "type": "button",
+                            "name": "EditActivity",
+                            "icon": "fa-snowboarding",
+                            "color": "green",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        
+                       
+},
+
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/activity/:activityKey/friend ",
+                            "form": {
+                                "form": "FriendForm"
                             }
                         },
  ]

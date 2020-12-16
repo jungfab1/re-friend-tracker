@@ -317,9 +317,7 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/location",
-                            "form": {
-                                "form": "LocationForm"
-                            }
+                            "page": "locationpage"
                         },
                     ]
                 },
@@ -437,6 +435,35 @@ export class GuiModel {
                             "url": "/activity/:activityKey/friend ",
                             "form": {
                                 "form": "FriendForm"
+                            }
+                        },
+ ]
+},
+{
+ "id": "locationpage",
+ "elementList": [
+ {
+ "type": "backbutton",
+ },{
+                            "type": "button",
+                            "name": "EditLocation",
+                            "icon": "fa-home",
+                            "color": "green",
+                            "form": {
+                                "form": "LocationForm"
+                            }
+                        
+                       
+},
+
+                        {
+                            "type": "list",
+                            "icon": "fa-snowboarding",
+                            "color": "red",
+                            "search": true,
+                            "url": "/location/:locationKey/activity",
+                            "form": {
+                                "form": "ActivityForm"
                             }
                         },
  ]

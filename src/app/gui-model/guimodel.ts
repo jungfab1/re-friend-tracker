@@ -33,6 +33,13 @@ export class GuiModel {
  "name": "Nickname",
  "width": 2,
  "required": true
+},{
+ "id": "group",
+ "type": "autocomplete",
+ "name": "Group",
+ "url": "/group",
+ "form": "GroupForm",
+ "width": 2
 },
                         {
                             "id":   "location",
@@ -169,7 +176,14 @@ export class GuiModel {
  "name": "Date",
  "width": 2,
  "required": true
- },
+ },{
+ "id": "group",
+ "type": "autocomplete",
+ "name": "Group",
+ "url": "/group",
+ "form": "GroupForm",
+ "width": 2
+},
  {
  "type": "deleteButton",
  "name": "Delete"
@@ -310,9 +324,10 @@ export class GuiModel {
  },
  {
  "type": "newButton",
- "name": "NewGroup",
+ "name": "NewActivity",
  "icon": "fa-weixin",
  "color": "green",
+ "width": "2",
  "form": {
  "form": "ActivityForm"
  }

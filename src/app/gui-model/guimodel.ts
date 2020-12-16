@@ -92,6 +92,13 @@ export class GuiModel {
                         {
                             "type": "deleteButton",
                             "name": "Delete"
+                        },                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
                         },
                         {
                             "type": "cancelButton",
@@ -144,6 +151,20 @@ export class GuiModel {
  "width": 2,
  "required": true
  },
+                         {
+                            "id": "date",
+                            "type": "date",
+                            "name": "CreationDate",
+                            "width": 2
+                        },
+                                                {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
  {
  "type": "deleteButton",
  "name": "Delete"
@@ -183,7 +204,14 @@ export class GuiModel {
  "url": "/group",
  "form": "GroupForm",
  "width": 2
-},
+},                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
  {
  "type": "deleteButton",
  "name": "Delete"

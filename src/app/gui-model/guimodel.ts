@@ -283,9 +283,7 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
-                            "form": {
-                                "form": "FriendForm"
-                            }
+                            "page": "friendpage"
                         },
                     ]
                 },
@@ -370,6 +368,43 @@ export class GuiModel {
 "form": "ActivityForm"
 }
 },
+ ]
+},{
+ "id": "friendpage",
+ "elementList": [
+ {
+ "type": "backbutton",
+ },{
+                            "type": "button",
+                            "name": "EditFriend",
+                            "icon": "fa-user",
+                            "color": "lime",
+                            "form": {
+                                "form": "FriendForm"
+                            }
+                        
+                       
+},
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "fa-user",
+                            "color": "green",
+                            "form": {
+                                "form": "AddActivityForm"
+                            },
+                            "width": "2"
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-home",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/friend/:friendKey/activity",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
  ]
 }
             ]
